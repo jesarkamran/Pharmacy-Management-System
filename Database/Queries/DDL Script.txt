@@ -1,0 +1,47 @@
+CREATE TABLE person(
+    ssn int PRIMARY KEY,
+    bdate date NOT NULL,
+    email varchar(255),
+    phone VARCHAR(255),
+    sex varchar(10)
+);
+
+CREATE TABLE name(
+    ssn int PRIMARY KEY REFERENCES PERSON(ssn),
+    fname varchar(255) NOT NULL,
+    mname varchar(255),
+    lname varchar(255)
+);
+
+CREATE TABLE address(
+    ssn int PRIMARY KEY REFERENCES PERSON(ssn),
+    "NO" int,
+    street varchar(255),
+    apt_no int,
+    city varchar(255),
+    state varchar(255),
+    zip int
+);
+
+CREATE TABLE employee(
+emp_id int PRIMARY KEY REFERENCES PERSON(ssn),
+rank varchar(255) NOT NULL,
+foffice varchar(255),
+hiredate date NOT NULL,
+salary int NOT NULL
+);
+
+CREATE TABLE stock(
+stock_id int PRIMARY KEY,
+stock_items_qunatity int NOT NULL,
+items_to_be_delivered int NOT NULL,
+most_sale_item int NOT NULL
+);
+
+CREATE TABLE supplier(
+supplier_id int PRIMARY KEY REFERENCES Employee(emp_id),
+supplier_status varchar(255) NOT NULL,
+total_deals int NOT NULL,
+pending_deals int NOT NULL,
+checks int REFERENCES Stock(stock_id)
+);
