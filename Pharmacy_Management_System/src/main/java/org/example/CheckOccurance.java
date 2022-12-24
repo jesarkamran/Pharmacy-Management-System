@@ -1,13 +1,8 @@
 package org.example;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class CheckOccurance extends JFrame {
     JButton newUser,oldUser,goBack;
@@ -70,10 +65,10 @@ public class CheckOccurance extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("NEW USER?")){
                 dispose();
-//                NewUser newUser =new NewUser();
+                new SignUp();
             }else if (e.getActionCommand().equals("ALREADY A USER")){
                 dispose();
-//                LoginPage loginPage = new LoginPage();
+                new Login();
             } else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();
                 new StartMenu();

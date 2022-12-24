@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class StartMenu extends JFrame {
-    JButton employee, customer, distributor, doctor;
+    JButton employee, customer, distributor, doctor, goback;
     JPanel panel1,panel2,panel3;
     JLabel label;
     StartMenu(){
@@ -14,7 +14,6 @@ public class StartMenu extends JFrame {
         ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
-
         Color primary = new Color(66, 106, 108);
 
         setLayout(new BorderLayout());
@@ -47,7 +46,12 @@ public class StartMenu extends JFrame {
         distributor.setBackground(primary);
         distributor.setFont(new Font("Calibri",Font.BOLD,25));
 
-        panel1.add(employee);panel1.add(customer);panel1.add(doctor);panel1.add(distributor);
+        goback = new JButton("GO BACK");
+        goback.setForeground(new Color(0xFFFAF9F4, true));
+        goback.setBackground(primary);
+        goback.setFont(new Font("Calibri",Font.BOLD,25));
+
+        panel1.add(employee);panel1.add(customer);panel1.add(doctor);panel1.add(distributor);panel1.add(goback);
         getContentPane().add(panel1).setBackground(Color.WHITE);
         add(panel1,BorderLayout.SOUTH);
 
@@ -63,6 +67,7 @@ public class StartMenu extends JFrame {
         customer.addActionListener(myActionListener);
         doctor.addActionListener(myActionListener);
         distributor.addActionListener(myActionListener);
+        goback.addActionListener(myActionListener);
         setVisible(true);
     }
     public class MyActionListener implements ActionListener {
@@ -80,6 +85,9 @@ public class StartMenu extends JFrame {
             }else if (e.getActionCommand().equals("CUSTOMER")){
                 dispose();
                 new CheckOccurance();
+            }else if (e.getActionCommand().equals("GO BACK")){
+                dispose();
+                new StartPage();
             }
         }
     }
