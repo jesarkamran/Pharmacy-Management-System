@@ -1,23 +1,22 @@
 package org.example;
 
-import oracle.jdbc.internal.JMSDequeueOptions;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CustomerMenu extends JFrame {
-    JLabel labelHeading = new JLabel("Pharmacy Management System"), name;
+    JLabel labelHeading, name;
     JTextField nameInput;
     JButton Search, Buy,BuyDrug,SearchDrug,homeButton;
 
-    CustomerMenu() {
+    CustomerMenu(String customerName) {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         setTitle("Pharmacy Management System");
         setBackground(Color.WHITE);
+        labelHeading = new JLabel("Hey there, "+customerName);
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -125,6 +124,7 @@ public class CustomerMenu extends JFrame {
                 Buy.setVisible(true);
                 name.setVisible(true);
                 nameInput.setVisible(true);
+                nameInput.setText("");
             }
             else if (e.getActionCommand().equals("SEARCH MEDICINE")) {
                 BuyDrug.setVisible(false);
@@ -134,6 +134,7 @@ public class CustomerMenu extends JFrame {
                 Search.setVisible(true);
                 name.setVisible(true);
                 nameInput.setVisible(true);
+                nameInput.setText("");
             }
             else if (e.getActionCommand().equals("SEARCH")) {
                 JOptionPane.showMessageDialog(new JFrame(), "Found");
@@ -144,6 +145,7 @@ public class CustomerMenu extends JFrame {
                 BuyDrug.setVisible(true);
                 SearchDrug.setVisible(true);
                 homeButton.setVisible(true);
+                nameInput.setText("");
             }
             else if (e.getActionCommand().equals("BUY")) {
                 JOptionPane.showMessageDialog(new JFrame(), "Bought");
@@ -154,6 +156,10 @@ public class CustomerMenu extends JFrame {
                 BuyDrug.setVisible(true);
                 SearchDrug.setVisible(true);
                 homeButton.setVisible(true);
+                nameInput.setText("");
+            }
+            else if (e.getActionCommand().equals("LOGOUT")) {
+                dispose();
             }
             else {
                 JOptionPane.showMessageDialog(new JFrame(), "Error Occured");

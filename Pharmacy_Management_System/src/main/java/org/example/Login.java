@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 public class Login extends JFrame {
-    JTextField emailInput;
+    JTextField ssnInput;
     JPasswordField passwordNameInput;
     String userTypeAccessed = "";
 
@@ -20,11 +20,11 @@ public class Login extends JFrame {
         Color primary = new Color(66, 106, 108);
         Color secondary = new Color(0xFFFAF9F4, true);
 
-        JLabel email = new JLabel("EMAIL:");
-        email.setFont(new Font("Calibri",Font.BOLD,30));
-        add(email);
-        emailInput = new JTextField();
-        add(emailInput);
+        JLabel ssn = new JLabel("SSN:");
+        ssn.setFont(new Font("Calibri",Font.BOLD,30));
+        add(ssn);
+        ssnInput = new JTextField();
+        add(ssnInput);
 
         JLabel password = new JLabel("PASSWORD:");
         password.setFont(new Font("Calibri",Font.BOLD,30));
@@ -57,7 +57,7 @@ public class Login extends JFrame {
             if (e.getActionCommand().equals("Login Now")) {
                 User user = null;
 
-                String userEmail = emailInput.getText();
+                int userSSN = Integer.parseInt(ssnInput.getText());
                 String userPassword = passwordNameInput.getText();
 
                 Connection conn = null;
@@ -66,13 +66,36 @@ public class Login extends JFrame {
                     conn = DriverManager.getConnection(
                             "jdbc:oracle:thin:@localhost:1521:orcl", "finalProject", "db");
                     stmt = conn.createStatement();
-                    ResultSet rs = stmt.executeQuery("SELECT * FROM Person WHERE email='"+userEmail+"'");
+                    ResultSet rs = stmt.executeQuery("SELECT * FROM Person WHERE ssn='"+userSSN+"'");
 
                     while (rs.next()) {
-                           String email = rs.getString("email");
+                           int ssn = rs.getInt("ssn");
                            String password = rs.getString("user_password");
-                           if (userEmail.equals(email) && userPassword.equals(password)){
-                               JOptionPane.showMessageDialog(new JFrame(), "Right Creditionals");
+                           if (userSSN==ssn && userPassword.equals(password)){
+                               String userName = "";
+                               ResultSet rs2 = stmt.executeQuery("SELECT * FROM NAME WHERE ssn='"+userSSN+"'");
+                               while (rs2.next()) {
+                                   userName = rs2.getString("fname");
+                               }
+
+                               switch (userTypeAccessed) {
+                                   case "Employee":
+
+                                       break;
+                                   case "Doctor":
+
+                                       break;
+                                   case "Distributor":
+
+                                       break;
+                                   case "Customer":
+                                       dispose();
+                                       new CustomerMenu(userName);
+                                       break;
+                                   case "Supplier":
+
+                                       break;
+                               }
                            } else {
                            JOptionPane.showMessageDialog(new JFrame(), "Invalid Creditionals");
                            }
