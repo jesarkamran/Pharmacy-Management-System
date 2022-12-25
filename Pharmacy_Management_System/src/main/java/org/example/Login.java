@@ -93,7 +93,12 @@ public class Login extends JFrame {
                                        new CustomerMenu(userName);
                                        break;
                                    case "Supplier":
-
+                                       dispose();
+                                       new SupplierMenu();
+                                       break;
+                                   case "Seller":
+                                       dispose();
+                                       new SellerMenu(userName);
                                        break;
                                }
                            } else {

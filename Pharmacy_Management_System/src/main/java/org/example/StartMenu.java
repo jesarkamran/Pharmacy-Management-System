@@ -81,7 +81,7 @@ public class StartMenu extends JFrame {
                 new CheckOccurance("Distributor");
             }else if (e.getActionCommand().equals("EMPLOYEE")){
                 dispose();
-                new CheckOccurance("Employee");
+                new EmployeeChild();
             }else if (e.getActionCommand().equals("CUSTOMER")){
                 dispose();
                 new CheckOccurance("Customer");

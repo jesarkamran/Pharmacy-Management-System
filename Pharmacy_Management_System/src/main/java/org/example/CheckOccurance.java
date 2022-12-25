@@ -73,7 +73,13 @@ public class CheckOccurance extends JFrame {
                 new Login(userTypeForSignUp);
             } else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();
-                new StartMenu();
+                if (userTypeForSignUp.equals("Seller")){
+                    new EmployeeChild();
+                }else if (userTypeForSignUp.equals("Supplier")){
+                    new EmployeeChild();
+                }else {
+                    new StartMenu();
+                }
             }
         }
     }

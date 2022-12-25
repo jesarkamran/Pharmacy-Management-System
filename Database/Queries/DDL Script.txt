@@ -38,8 +38,8 @@ CREATE TABLE employee(
 CREATE TABLE stock(
     stock_id int PRIMARY KEY,
     stock_items_qunatity int NOT NULL,
-    items_to_be_delivered int NOT NULL,
-    most_sale_item int NOT NULL
+    items_to_be_delivered VARCHAR(255) NOT NULL,
+    most_sale_item VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE item_details(

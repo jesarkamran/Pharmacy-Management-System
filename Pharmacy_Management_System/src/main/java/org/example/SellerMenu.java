@@ -5,20 +5,20 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CustomerMenu extends JFrame {
+public class SellerMenu extends JFrame {
     JLabel labelHeading, name;
     JTextField nameInput;
-    JButton Search, Buy,BuyDrug,SearchDrug,homeButton;
+    JButton Search, Buy,AddDrug,SalesDetails,homeButton, SellDrug;
 
-    CustomerMenu(String customerName) {
+    SellerMenu(String sellerName) {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         setTitle("Pharmacy Management System");
-        setBackground(Color.WHITE);
         ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
-        labelHeading = new JLabel("Hey there, "+customerName);
+        setBackground(Color.WHITE);
+        labelHeading = new JLabel("Hey there, "+sellerName);
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -47,46 +47,52 @@ public class CustomerMenu extends JFrame {
         name.setForeground(new Color(0xFF070707, true));
         name.setBackground(new Color(0xFF426A6C, true));
         name.setFont(new Font("Calibri",Font.BOLD,25));
-        name.setBounds(400,100,500,100);
+        name.setBounds(400,100,500,75);
         name.setVisible(false);
 
         nameInput = new JTextField();
         nameInput.setBackground(new Color(0xFFFFFFFF, true));
         nameInput.setFont(new Font("Calibri",Font.BOLD,25));
-        nameInput.setBounds(400,220,500,100);
+        nameInput.setBounds(400,220,500,75);
         nameInput.setVisible(false);
 
         Search = new JButton("SEARCH");
         Search.setForeground(new Color(0xFFFFFFFF, true));
         Search.setBackground(new Color(0xFF426A6C, true));
         Search.setFont(new Font("Calibri",Font.BOLD,25));
-        Search.setBounds(400,340,500,100);
+        Search.setBounds(400,340,500,75);
         Search.setVisible(false);
 
         Buy = new JButton("BUY");
         Buy.setForeground(new Color(0xFFFFFFFF, true));
         Buy.setBackground(new Color(0xFF426A6C, true));
         Buy.setFont(new Font("Calibri",Font.BOLD,25));
-        Buy.setBounds(400,340,500,100);
+        Buy.setBounds(400,340,500,75);
         Buy.setVisible(false);
 
-        BuyDrug = new JButton("BUY MEDICINE");
-        BuyDrug.setForeground(new Color(0xFFFFFFFF, true));
-        BuyDrug.setBackground(new Color(0xFF426A6C, true));
-        BuyDrug.setFont(new Font("Calibri",Font.BOLD,25));
-        BuyDrug.setBounds(400,100,500,100);
+        AddDrug = new JButton("ADD MEDICINE");
+        AddDrug.setForeground(new Color(0xFFFFFFFF, true));
+        AddDrug.setBackground(new Color(0xFF426A6C, true));
+        AddDrug.setFont(new Font("Calibri",Font.BOLD,25));
+        AddDrug.setBounds(400,100,500,75);
 
-        SearchDrug = new JButton("SEARCH MEDICINE");
-        SearchDrug.setForeground(new Color(0xFFFFFFFF, true));
-        SearchDrug.setBackground(new Color(0xFF426A6C, true));
-        SearchDrug.setFont(new Font("Calibri",Font.BOLD,25));
-        SearchDrug.setBounds(400,220,500,100);
+        SalesDetails = new JButton("SEE SALES DETAILS");
+        SalesDetails.setForeground(new Color(0xFFFFFFFF, true));
+        SalesDetails.setBackground(new Color(0xFF426A6C, true));
+        SalesDetails.setFont(new Font("Calibri",Font.BOLD,25));
+        SalesDetails.setBounds(400,220,500,75);
+
+        SellDrug = new JButton("SELL DRUG");
+        SellDrug.setForeground(new Color(0xFFFFFFFF, true));
+        SellDrug.setBackground(new Color(0xFF426A6C, true));
+        SellDrug.setFont(new Font("Calibri",Font.BOLD,25));
+        SellDrug.setBounds(400,340,500,75);
 
         homeButton = new JButton("LOGOUT");
         homeButton.setForeground(new Color(0xFFFFFFFF, true));
         homeButton.setBackground(new Color(0xFF426A6C, true));
         homeButton.setFont(new Font("Calibri",Font.BOLD,25));
-        homeButton.setBounds(400,340,500,100);
+        homeButton.setBounds(400,460,500,75);
 
         MyActionListener act1 = new MyActionListener(),
                 act2 = new MyActionListener(),
@@ -94,72 +100,70 @@ public class CustomerMenu extends JFrame {
                 act4 = new MyActionListener(),
                 act5 = new MyActionListener();
 
-        Buy.addActionListener(act1);
+        SellDrug.addActionListener(act1);
         Search.addActionListener(act2);
-        BuyDrug.addActionListener(act3);
-        SearchDrug.addActionListener(act4);
+        AddDrug.addActionListener(act3);
+        SalesDetails.addActionListener(act4);
         homeButton.addActionListener(act5);
 
         north.add(labelHeading);
         center.add(Search);
-        center.add(Buy);
+        center.add(SellDrug);
         center.add(name);
         center.add(nameInput);
-        center.add(BuyDrug);
-        center.add(SearchDrug);
+        center.add(AddDrug);
+        center.add(SalesDetails);
         center.add(homeButton);
 
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        new SupplierMenu();
+    }
+
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            if (e.getActionCommand().equals("BUY MEDICINE")) {
-                BuyDrug.setVisible(false);
-                SearchDrug.setVisible(false);
-                homeButton.setVisible(false);
-
-                Buy.setVisible(true);
-                name.setVisible(true);
-                nameInput.setVisible(true);
-                nameInput.setText("");
+            if (e.getActionCommand().equals("ADD MEDICINE")) {
+                JOptionPane.showMessageDialog(new JFrame(), "In Process");
             }
-            else if (e.getActionCommand().equals("SEARCH MEDICINE")) {
-                BuyDrug.setVisible(false);
-                SearchDrug.setVisible(false);
+            else if (e.getActionCommand().equals("SEE SALES DETAILS")) {
+                JOptionPane.showMessageDialog(new JFrame(), "In Process");
+            }
+            else if (e.getActionCommand().equals("SELL DRUG")) {
+                AddDrug.setVisible(false);
+                SalesDetails.setVisible(false);
+                SellDrug.setVisible(false);
                 homeButton.setVisible(false);
 
+                Search.setText("SEARCH");
                 Search.setVisible(true);
+                name.setText("ENTER CUSTOMER SSN TO CONTACT");
                 name.setVisible(true);
                 nameInput.setVisible(true);
-                nameInput.setText("");
+
             }
             else if (e.getActionCommand().equals("SEARCH")) {
-                JOptionPane.showMessageDialog(new JFrame(), "Found");
+                nameInput.setText("");
+                JOptionPane.showMessageDialog(new JFrame(), "FOUND");
+                name.setText("ENTER YOUR MESSAGE TO DISTRIBUTOR");
+                Search.setText("SEND MESSAGE");
+            }
+            else if (e.getActionCommand().equals("SEND MESSAGE")) {
+                nameInput.setText("");
                 Search.setVisible(false);
                 name.setVisible(false);
                 nameInput.setVisible(false);
 
-                BuyDrug.setVisible(true);
-                SearchDrug.setVisible(true);
-                homeButton.setVisible(true);
-                nameInput.setText("");
-            }
-            else if (e.getActionCommand().equals("BUY")) {
-                JOptionPane.showMessageDialog(new JFrame(), "Bought");
-                Buy.setVisible(false);
-                name.setVisible(false);
-                nameInput.setVisible(false);
-
-                BuyDrug.setVisible(true);
-                SearchDrug.setVisible(true);
+                AddDrug.setVisible(true);
+                SalesDetails.setVisible(true);
+                SellDrug.setVisible(true);
                 homeButton.setVisible(true);
                 nameInput.setText("");
             }
             else if (e.getActionCommand().equals("LOGOUT")) {
                 dispose();
-            }
-            else {
-                JOptionPane.showMessageDialog(new JFrame(), "Error Occurred");
+                new EmployeeChild();
             }
         }
     }
