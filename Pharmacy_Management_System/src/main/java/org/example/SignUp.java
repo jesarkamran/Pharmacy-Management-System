@@ -3,13 +3,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 
 public class SignUp extends JFrame {
-    JTextField firstNameInput, middleNameInput, lastNameInput, phoneInput,
+    JTextField ssnInput, firstNameInput, middleNameInput, lastNameInput, phoneInput,
             b_dateInput, genderInput, emailInput, passwordInput, confirmPasswordInput,
-            zipCodeInput, stateNameInput, cityNameInput, addressInput;
+            zipCodeInput, stateNameInput, addressInput;
+    String userTypeAccessed = "";
 
-    SignUp(){
+    SignUp(String userType){
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pharmacy Management System");
@@ -18,6 +20,12 @@ public class SignUp extends JFrame {
         ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
+        userTypeAccessed = userType;
+
+        JLabel ssn = new JLabel("ENTER YOUR SSN");
+        add(ssn);
+        ssnInput = new JTextField();
+        add(ssnInput);
 
         JLabel firstName = new JLabel("ENTER YOUR FIRST NAME");
         add(firstName);
@@ -59,11 +67,6 @@ public class SignUp extends JFrame {
         addressInput = new JTextField();
         add(addressInput);
 
-        JLabel cityName = new JLabel("ENTER YOUR CITY NAME");
-        add(cityName);
-        cityNameInput = new JTextField();
-        add(cityNameInput);
-
         JLabel stateName = new JLabel("ENTER YOUR STATE NAME");
         add(stateName);
         stateNameInput = new JTextField();
@@ -84,10 +87,10 @@ public class SignUp extends JFrame {
         confirmPasswordInput = new JTextField();
         add(confirmPasswordInput);
 
-        JLabel empty1 = new JLabel(""),
+        JLabel empty3 = new JLabel(""),
                 empty2 = new JLabel(""),
-                empty3 = new JLabel("");
-        add(empty1);add(empty2);add(empty3);
+                empty1 = new JLabel("");
+        add(empty3);add(empty2);add(empty1);
 
         JButton submitButton = new JButton("SUBMIT");
         submitButton.setForeground(new Color(0xFFA6E1E1, true));
@@ -100,6 +103,7 @@ public class SignUp extends JFrame {
         homeButton.setBackground(new Color(0xFF426A6C, true));
         homeButton.setFont(new Font("Calibri",Font.BOLD,25));
         homeButton.setSize(300,50);
+
         add(submitButton);
         add(homeButton);
 
@@ -114,8 +118,69 @@ public class SignUp extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("SUBMIT")){
-                dispose();
-//                Action to be performed
+
+                int ssn = Integer.parseInt(ssnInput.getText());
+                String bdate = b_dateInput.getText();
+                String email = emailInput.getText();
+                String password = passwordInput.getText();
+                String phone = phoneInput.getText();
+                String sex = genderInput.getText();
+
+                String firstName = firstNameInput.getText();
+                String midName = middleNameInput.getText();
+                String lastName = lastNameInput.getText();
+
+                String address = addressInput.getText();
+                String stateName = stateNameInput.getText();
+                int zipCode = Integer.parseInt(zipCodeInput.getText());
+
+                ConnectionDB connectionDB = new ConnectionDB();
+                try {
+                    boolean check = true;
+                    ResultSet query  = connectionDB.statement.executeQuery("SELECT ssn FROM PERSON");
+                    while (query.next()){
+                        if (query.getInt(1) == ssn) {
+                            check = false;
+                        }
+                    }
+                    if (check) {
+                        PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO PERSON VALUES(?,?,?,?,?,?)");
+                        stmt.setInt(1,ssn);
+                        stmt.setString(2,bdate);
+                        stmt.setString(3,email);
+                        stmt.setString(4,password);
+                        stmt.setString(5,phone);
+                        stmt.setString(6,sex);
+                        stmt.executeUpdate();
+
+                        stmt = connectionDB.connection.prepareStatement("INSERT INTO NAME VALUES(?,?,?,?)");
+                        stmt.setInt(1,ssn);
+                        stmt.setString(2,firstName);
+                        stmt.setString(3,midName);
+                        stmt.setString(4,lastName);
+                        stmt.executeUpdate();
+
+                        stmt = connectionDB.connection.prepareStatement("INSERT INTO ADDRESS VALUES(?,?,?,?)");
+                        stmt.setInt(1,ssn);
+                        stmt.setString(2,address);
+                        stmt.setString(3,stateName);
+                        stmt.setInt(4,zipCode);
+                        stmt.executeUpdate();
+
+                        stmt = connectionDB.connection.prepareStatement("INSERT INTO PERSONTYPE VALUES(?,?)");
+                        stmt.setInt(1,ssn);
+                        stmt.setString(2,userTypeAccessed);
+                        stmt.executeUpdate();
+
+                        JOptionPane.showMessageDialog(new JFrame(), "Signed Up Successfully");
+                        dispose();
+                        new CheckOccurance(userTypeAccessed);
+                    } else {
+                        JOptionPane.showMessageDialog(new JFrame(), "User Already Exists");
+                    }
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
             }else if (e.getActionCommand().equals("HOME")){
                 dispose();
                 new StartMenu();

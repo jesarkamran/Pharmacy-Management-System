@@ -75,16 +75,16 @@ public class StartMenu extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("DOCTOR")){
                 dispose();
-                new CheckOccurance();
+                new CheckOccurance("Doctor");
             }else if (e.getActionCommand().equals("DISTRIBUTOR")){
                 dispose();
-                new CheckOccurance();
+                new CheckOccurance("Distributor");
             }else if (e.getActionCommand().equals("EMPLOYEE")){
                 dispose();
-                new CheckOccurance();
+                new CheckOccurance("Employee");
             }else if (e.getActionCommand().equals("CUSTOMER")){
                 dispose();
-                new CheckOccurance();
+                new CheckOccurance("Customer");
             }else if (e.getActionCommand().equals("GO BACK")){
                 dispose();
                 new StartPage();

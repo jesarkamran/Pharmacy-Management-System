@@ -2,9 +2,11 @@ CREATE TABLE person(
     ssn int PRIMARY KEY,
     bdate date NOT NULL,
     email varchar(255),
+    user_password varchar(255),
     phone VARCHAR(255),
     sex varchar(10)
 );
+
 
 CREATE TABLE name(
     ssn int PRIMARY KEY REFERENCES PERSON(ssn),
@@ -15,12 +17,14 @@ CREATE TABLE name(
 
 CREATE TABLE address(
     ssn int PRIMARY KEY REFERENCES PERSON(ssn),
-    "NO" int,
     street varchar(255),
-    apt_no int,
-    city varchar(255),
     state varchar(255),
     zip int
+);
+
+CREATE TABLE personType(
+    ssn int PRIMARY KEY REFERENCES PERSON(ssn),
+    personType varchar(255)
 );
 
 CREATE TABLE employee(

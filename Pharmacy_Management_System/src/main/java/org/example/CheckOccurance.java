@@ -8,7 +8,9 @@ public class CheckOccurance extends JFrame {
     JButton newUser,oldUser,goBack;
     JPanel panel1,panel2,panel3;
     JLabel label;
-    CheckOccurance(){
+    String userTypeForSignUp = "";
+    CheckOccurance(String userType){
+        userTypeForSignUp = userType;
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pharmacy Management System");
@@ -65,10 +67,10 @@ public class CheckOccurance extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("NEW USER?")){
                 dispose();
-                new SignUp();
+                new SignUp(userTypeForSignUp);
             }else if (e.getActionCommand().equals("ALREADY A USER")){
                 dispose();
-                new Login();
+                new Login(userTypeForSignUp);
             } else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();
                 new StartMenu();
