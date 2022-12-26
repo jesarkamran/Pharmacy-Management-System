@@ -9,7 +9,7 @@ public class SellerMenu extends JFrame {
     JLabel labelHeading, name;
     JTextField nameInput;
     JButton Search, Buy,AddDrug,SalesDetails,homeButton, SellDrug;
-
+    String sellerNameAccessed = "";
     SellerMenu(String sellerName) {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -19,6 +19,7 @@ public class SellerMenu extends JFrame {
         setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
         labelHeading = new JLabel("Hey there, "+sellerName);
+        sellerNameAccessed = sellerName;
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -125,7 +126,8 @@ public class SellerMenu extends JFrame {
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("ADD MEDICINE")) {
-                JOptionPane.showMessageDialog(new JFrame(), "In Process");
+                dispose();
+                new Drug_Details(sellerNameAccessed);
             }
             else if (e.getActionCommand().equals("SEE SALES DETAILS")) {
                 JOptionPane.showMessageDialog(new JFrame(), "In Process");
