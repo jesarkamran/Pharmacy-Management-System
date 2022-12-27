@@ -18,7 +18,7 @@ public class Customer_Menu extends JFrame {
         setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
         customerNameAccessed = customer_name;
-        labelHeading = new JLabel("Hey,there "+customerNameAccessed);
+        labelHeading = new JLabel("Hey, there "+customerNameAccessed);
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -95,19 +95,13 @@ public class Customer_Menu extends JFrame {
             if (e.getActionCommand().equals("BUY DRUGS")) {
 
                 // BUY DRUGS POP-UP SCREEN FRONTEND
-                new Pop_Up_Screen("BUY DRUGS","BUY","buy");
-
-                // BUY DRUGS POP-UP SCREEN BACKEND
-
+                new Customer_Pop_Up_Screen("BUY DRUGS","BUY","buy");
 
             }
             else if (e.getActionCommand().equals("DELETE DRUGS")) {
 
                 // DELETE DRUGS POP-UP SCREEN FRONTEND
-                new Pop_Up_Screen("DELETE DRUGS","DELETE","delete");
-
-                // DELETE DRUGS POP-UP SCREEN BACKEND
-
+                new Customer_Pop_Up_Screen("DELETE DRUGS","DELETE","delete");
 
             }
             else if (e.getActionCommand().equals("VIEW")) {
@@ -117,9 +111,7 @@ public class Customer_Menu extends JFrame {
             else if (e.getActionCommand().equals("SEARCH DRUGS")) {
 
                 // SEARCH DRUGS POP-UP SCREEN FRONTEND
-                new Pop_Up_Screen("SEARCH DRUGS","SEARCH","search");
-
-                // SEARCH DRUGS POP-UP SCREEN BACKEND
+                new Customer_Pop_Up_Screen("SEARCH DRUGS","SEARCH","search");
 
             }
             else if (e.getActionCommand().equals("GO BACK")) {

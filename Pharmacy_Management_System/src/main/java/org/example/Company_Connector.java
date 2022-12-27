@@ -82,13 +82,14 @@ public class Company_Connector extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("ADD COMPANY")) {
                 dispose();
+                new Add_Company(userNameAccessed);
             }
             else if (e.getActionCommand().equals("MANAGE COMPANY")) {
                 dispose();
                 new ManageCompany(userNameAccessed);
             }
             else if (e.getActionCommand().equals("GO BACK")) {
-                new CheckOccurrence(userNameAccessed);
+                new StartMenu();
                 dispose();
             }
         }

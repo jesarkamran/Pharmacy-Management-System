@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ManageCompany extends JFrame {
-    JLabel labelHeading = new JLabel("ManageCompany FORM");
+    JLabel labelHeading;
     JButton add_drugs, delete_drugs, view, search, sell_drugs_to_supplier, go_back;
     String userNameAccessed = "";
     ManageCompany(String companyConnectorName) {
@@ -18,7 +18,7 @@ public class ManageCompany extends JFrame {
         setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
         userNameAccessed = companyConnectorName;
-
+        labelHeading = new JLabel(companyConnectorName+", what do you wanna do?");
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
 
@@ -78,27 +78,18 @@ public class ManageCompany extends JFrame {
         go_back.setFont(new Font("Calibri",Font.BOLD,25));
         go_back.setBounds(750,420,400,75);
 
-        MyActionListener act1 = new MyActionListener(),
-                act2 = new MyActionListener(),
-                act3 = new MyActionListener(),
-                act4 = new MyActionListener(),
-                act5 = new MyActionListener(),
-                act6 = new MyActionListener();
+        MyActionListener myActionListener = new MyActionListener();
 
-        add_drugs.addActionListener(act1);
-        view.addActionListener(act2);
-        search.addActionListener(act3);
-        sell_drugs_to_supplier.addActionListener(act4);
-        delete_drugs.addActionListener(act5);
-        go_back.addActionListener(act6);
+        add_drugs.addActionListener(myActionListener);
+        view.addActionListener(myActionListener);
+        search.addActionListener(myActionListener);
+        sell_drugs_to_supplier.addActionListener(myActionListener);
+        delete_drugs.addActionListener(myActionListener);
+        go_back.addActionListener(myActionListener);
 
         north.add(labelHeading);
-        center.add(add_drugs);
-        center.add(delete_drugs);
-        center.add(view);
-        center.add(search);
-        center.add(sell_drugs_to_supplier);
-        center.add(go_back);
+        center.add(add_drugs);center.add(delete_drugs);center.add(view);
+        center.add(search);center.add(sell_drugs_to_supplier);center.add(go_back);
         setVisible(true);
     }
 
