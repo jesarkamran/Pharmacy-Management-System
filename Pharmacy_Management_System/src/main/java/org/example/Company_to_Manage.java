@@ -5,12 +5,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Company_Connector extends JFrame {
-    JLabel labelHeading;
-
-    JButton add_Company, manage_Company,  go_back;
+public class Company_to_Manage extends JFrame
+{
+    JLabel labelHeading = new JLabel("AddCOMPANY FORM"),
+            comp_id;
+    JTextField comp_id_input;
+    JButton submit, go_back;
     String userNameAccessed = "";
-    Company_Connector(String companyConnectorName) {
+    int companyId = 0;
+    Company_to_Manage(String userName)
+    {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -18,8 +22,7 @@ public class Company_Connector extends JFrame {
         ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
-        userNameAccessed = companyConnectorName;
-        labelHeading = new JLabel("Hey, there "+userNameAccessed);
+        userNameAccessed = userName;
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -44,53 +47,56 @@ public class Company_Connector extends JFrame {
 
         center.setLayout(null);
 
-        add_Company = new JButton("ADD COMPANY");
-        add_Company.setForeground(new Color(0xFFFFFFFF, true));
-        add_Company.setBackground(new Color(0xFF426A6C, true));
-        add_Company.setFont(new Font("Calibri",Font.BOLD,25));
-        add_Company.setBounds(400,100,500,75);
+        comp_id = new JLabel("ENTER COMPANY ID TO MANAGE");
+        comp_id.setForeground(new Color(0xFF426A6C, true));
+        comp_id.setFont(new Font("Calibri",Font.BOLD,25));
+        comp_id.setBounds(250,220,400,75);
 
-        manage_Company = new JButton("MANAGE COMPANY");
-        manage_Company.setForeground(new Color(0xFFFFFFFF, true));
-        manage_Company.setBackground(new Color(0xFF426A6C, true));
-        manage_Company.setFont(new Font("Calibri",Font.BOLD,25));
-        manage_Company.setBounds(400,220,500,75);
+        comp_id_input = new JTextField();
+        comp_id_input.setForeground(new Color(0xFF426A6C, true));
+        comp_id_input.setFont(new Font("Calibri",Font.BOLD,25));
+        comp_id_input.setBounds(750,220,400,75);
 
         go_back = new JButton("GO BACK");
         go_back.setForeground(new Color(0xFFFFFFFF, true));
         go_back.setBackground(new Color(0xFF426A6C, true));
         go_back.setFont(new Font("Calibri",Font.BOLD,25));
-        go_back.setBounds(400,340,500,75);
+        go_back.setBounds(250,320,400,75);
 
-        MyActionListener act1 = new MyActionListener(),
-                act2 = new MyActionListener(),
-                act3 = new MyActionListener(),
-                act4 = new MyActionListener();
+        submit = new JButton("SUBMIT");
+        submit.setForeground(new Color(0xFFFFFFFF, true));
+        submit.setBackground(new Color(0xFF426A6C, true));
+        submit.setFont(new Font("Calibri",Font.BOLD,25));
+        submit.setBounds(750,320,400,75);
 
-        add_Company.addActionListener(act1);
-        manage_Company.addActionListener(act2);
-        go_back.addActionListener(act4);
+        MyActionListener act = new MyActionListener();
+        submit.addActionListener(act);
+        go_back.addActionListener(act);
 
         north.add(labelHeading);
-        center.add(add_Company);
-        center.add(manage_Company);
+        center.add(comp_id);
+        center.add(comp_id_input);
+        center.add(submit);
         center.add(go_back);
+
         setVisible(true);
     }
 
-    class MyActionListener implements ActionListener {
+    public static void main(String[] args) {
+        new Company_to_Manage("Deepak");
+    }
+
+    class MyActionListener  implements ActionListener
+    {
         public void actionPerformed(ActionEvent e) {
-            if (e.getActionCommand().equals("ADD COMPANY")) {
+            if (e.getActionCommand().equals("SUBMIT")) {
                 dispose();
-                new Add_Company(userNameAccessed);
-            }
-            else if (e.getActionCommand().equals("MANAGE COMPANY")) {
-                dispose();
-                new Company_to_Manage(userNameAccessed);
+                companyId = Integer.parseInt(comp_id_input.getText());
+                new ManageCompany(userNameAccessed,companyId);
             }
             else if (e.getActionCommand().equals("GO BACK")) {
-                new StartMenu();
                 dispose();
+                new Company_Connector(userNameAccessed);
             }
         }
     }

@@ -45,7 +45,8 @@ public class Login extends JFrame {
         add(goBack);
 
         MyActionListener myActionListener = new MyActionListener();
-        loginButton.addActionListener(myActionListener);
+        MyActionListener myActionListener2 = new MyActionListener();
+        loginButton.addActionListener(myActionListener2);
         goBack.addActionListener(myActionListener);
         setLayout(new GridLayout(3, 2, 0, 200));
         setVisible(true);
@@ -63,13 +64,14 @@ public class Login extends JFrame {
                 Statement stmt = null;
                 try {
                     conn = DriverManager.getConnection(
-                            "jdbc:oracle:thin:@localhost:1521:orcl", "finalProject", "db");
+                            "jdbc:oracle:thin:@localhost:1521:orcl", "demo", "db");
                     stmt = conn.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM Person WHERE ssn='"+userSSN+"'");
 
                     while (rs.next()) {
                            int ssn = rs.getInt("ssn");
                            String password = rs.getString("user_password");
+
                            if (userSSN==ssn && userPassword.equals(password)){
                                String userName = "";
                                ResultSet rs2 = stmt.executeQuery("SELECT * FROM NAME WHERE ssn='"+userSSN+"'");
@@ -78,15 +80,16 @@ public class Login extends JFrame {
                                }
 
                                switch (userTypeAccessed) {
+
                                    case "Employee":
-
                                        break;
+
                                    case "Doctor":
-
                                        break;
+
                                    case "Distributor":
-
                                        break;
+
                                    case "Customer":
                                        dispose();
                                        new Customer_Menu(userName);

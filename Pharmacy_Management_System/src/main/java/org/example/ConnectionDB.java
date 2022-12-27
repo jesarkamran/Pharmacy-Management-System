@@ -8,7 +8,7 @@ public class ConnectionDB {
     public ConnectionDB() {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl","finalProject","db");
+            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl","demo","db");
             statement = connection.createStatement();
 
 

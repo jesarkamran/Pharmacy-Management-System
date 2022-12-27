@@ -88,12 +88,8 @@ public class Add_Company extends JFrame
         go_back.addActionListener(act);
 
         north.add(labelHeading);
-        center.add(comp_id);
-        center.add(company_name);
-        center.add(comp_id_input);
-        center.add(company_name_Input);
-        center.add(submit);
-        center.add(go_back);
+        center.add(comp_id);center.add(company_name);center.add(comp_id_input);
+        center.add(company_name_Input);center.add(submit);center.add(go_back);
 
         setVisible(true);
     }
@@ -111,7 +107,6 @@ public class Add_Company extends JFrame
                 // BACKEND
                 int companyId = Integer.parseInt(comp_id_input.getText());
                 String companyName = company_name_Input.getText();
-                int drugId = generateRandom();
 
                 ConnectionDB connectionDB = new ConnectionDB();
                 try {
@@ -123,10 +118,9 @@ public class Add_Company extends JFrame
                         }
                     }
                     if (check) {
-                        PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO company VALUES(?,?,?)");
+                        PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO company VALUES(?,?)");
                         stmt.setInt(1,companyId);
                         stmt.setString(2,companyName);
-                        stmt.setInt(3,111);
                         stmt.executeUpdate();
 
                         JOptionPane.showMessageDialog(new JFrame(), "Company Added Successfully");
@@ -138,7 +132,6 @@ public class Add_Company extends JFrame
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
-
             }
             else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();

@@ -9,7 +9,8 @@ public class ManageCompany extends JFrame {
     JLabel labelHeading;
     JButton add_drugs, delete_drugs, view, search, sell_drugs_to_supplier, go_back;
     String userNameAccessed = "";
-    ManageCompany(String companyConnectorName) {
+    int companyId = 0;
+    ManageCompany(String companyConnectorName,int companyIdIN) {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -17,7 +18,10 @@ public class ManageCompany extends JFrame {
         ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
+        companyId = companyIdIN;
+
         userNameAccessed = companyConnectorName;
+
         labelHeading = new JLabel(companyConnectorName+", what do you wanna do?");
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
@@ -96,7 +100,8 @@ public class ManageCompany extends JFrame {
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("ADD DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "ADD DRUG Clicked");
+                dispose();
+                new Add_Drugs(userNameAccessed,companyId);
             }
             else if (e.getActionCommand().equals("DELETE DRUGS")) {
                 JOptionPane.showMessageDialog(new JFrame(), "DELETE DRUGS Clicked");

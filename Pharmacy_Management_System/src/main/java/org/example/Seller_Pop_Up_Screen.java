@@ -90,11 +90,11 @@ public class Seller_Pop_Up_Screen extends JFrame {
 
             ConnectionDB connectionDB = new ConnectionDB();
             try {
-                boolean check = true;
+                boolean check = false;
                 ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM drug");
                 while (query.next()){
-                    if (query.getString(2).equals(drugName)) {
-                        check = false;
+                    if (query.getString("drug_name").equals(drugName)) {
+                        check = true;
                     }
                 }
 
@@ -153,12 +153,22 @@ public class Seller_Pop_Up_Screen extends JFrame {
 
                         case "search":
 
+                            // BACKEND LOGIC
+                            String outputData = "Here's the search data from Drug ID:"+drugId+"\n \n \n \n "+
+                                    "Drug Name: "+drugName+"\n"+
+                                    "Drug Expiry Date: "+expiry_date+"\n"+
+                                    "Drug Manufacture Date: "+manufactured_date+"\n"+
+                                    "Price: "+drug_b2b_price+"\n"+
+                                    "Company Name: "+manufacturer_company_name+
+                                    "\n \n ";
+                            JOptionPane.showMessageDialog(new JFrame(),outputData);
+
                             break;
                     }
 
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(new JFrame(), "Drug doesn't Exists");
+                    JOptionPane.showMessageDialog(new JFrame(), "Drug not found!!");
                 }
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
