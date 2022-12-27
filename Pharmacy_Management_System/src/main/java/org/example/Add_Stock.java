@@ -94,7 +94,7 @@ public class Add_Stock extends JFrame{
 
             }else if (e.getActionCommand().equals("CANCEL")){
                 dispose();
-                new SupplierMenu();
+//                new SupplierMenu();
             }
         }
     }

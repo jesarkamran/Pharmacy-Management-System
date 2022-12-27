@@ -4,12 +4,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CheckOccurance extends JFrame {
+public class CheckOccurrence extends JFrame {
     JButton newUser,oldUser,goBack;
     JPanel panel1,panel2,panel3;
     JLabel label;
     String userTypeForSignUp = "";
-    CheckOccurance(String userType){
+    CheckOccurrence(String userType){
         userTypeForSignUp = userType;
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -73,9 +73,7 @@ public class CheckOccurance extends JFrame {
                 new Login(userTypeForSignUp);
             } else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();
-                if (userTypeForSignUp.equals("Seller")){
-                    new EmployeeChild();
-                }else if (userTypeForSignUp.equals("Supplier")){
+                if (userTypeForSignUp.equals("Seller") || userTypeForSignUp.equals("Supplier")){
                     new EmployeeChild();
                 }else {
                     new StartMenu();

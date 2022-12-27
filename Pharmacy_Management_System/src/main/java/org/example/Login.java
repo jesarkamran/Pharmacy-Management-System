@@ -55,7 +55,6 @@ public class Login extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("Login Now")) {
-                User user = null;
 
                 int userSSN = Integer.parseInt(ssnInput.getText());
                 String userPassword = passwordNameInput.getText();
@@ -90,15 +89,19 @@ public class Login extends JFrame {
                                        break;
                                    case "Customer":
                                        dispose();
-                                       new CustomerMenu(userName);
+                                       new Customer_Menu(userName);
                                        break;
                                    case "Supplier":
                                        dispose();
-                                       new SupplierMenu();
+                                       new SupplierMenu(userName);
                                        break;
                                    case "Seller":
                                        dispose();
                                        new SellerMenu(userName);
+                                       break;
+                                   case "Company Connector":
+                                       dispose();
+                                       new Company_Connector(userName);
                                        break;
                                }
                            } else {
@@ -112,7 +115,7 @@ public class Login extends JFrame {
 
             }else if (e.getActionCommand().equals("Go Back")){
                 dispose();
-                new CheckOccurance(userTypeAccessed);
+                new CheckOccurrence(userTypeAccessed);
             }
         }
     }

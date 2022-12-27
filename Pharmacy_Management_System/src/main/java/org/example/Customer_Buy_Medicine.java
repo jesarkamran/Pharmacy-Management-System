@@ -101,7 +101,7 @@ public class Customer_Buy_Medicine extends JFrame {
 
             }else if (e.getActionCommand().equals("CANCEL")){
                 dispose();
-                new CustomerMenu(customerNameAccessed);
+                new Customer_Menu(customerNameAccessed);
             }
         }
     }

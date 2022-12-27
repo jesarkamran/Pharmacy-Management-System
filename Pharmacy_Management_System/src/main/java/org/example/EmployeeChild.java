@@ -76,20 +76,16 @@ public class EmployeeChild extends JFrame {
 
         setVisible(true);
     }
-
-    public static void main(String[] args) {
-        new SupplierMenu();
-    }
-
+    
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("SUPPLIER")) {
                 dispose();
-                new CheckOccurance("Supplier");
+                new CheckOccurrence("Supplier");
             }
             else if (e.getActionCommand().equals("SELLER")) {
                 dispose();
-                new CheckOccurance("Seller");
+                new CheckOccurrence("Seller");
             }
             else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();

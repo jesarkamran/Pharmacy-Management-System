@@ -144,13 +144,14 @@ public class SignUp extends JFrame {
                         }
                     }
                     if (check) {
-                        PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO PERSON VALUES(?,?,?,?,?,?)");
+                        PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO PERSON VALUES(?,?,?,?,?,?,?)");
                         stmt.setInt(1,ssn);
                         stmt.setString(2,bdate);
                         stmt.setString(3,email);
                         stmt.setString(4,password);
                         stmt.setString(5,phone);
                         stmt.setString(6,sex);
+                        stmt.setString(7,userTypeAccessed);
                         stmt.executeUpdate();
 
                         stmt = connectionDB.connection.prepareStatement("INSERT INTO NAME VALUES(?,?,?,?)");
@@ -167,14 +168,9 @@ public class SignUp extends JFrame {
                         stmt.setInt(4,zipCode);
                         stmt.executeUpdate();
 
-                        stmt = connectionDB.connection.prepareStatement("INSERT INTO PERSONTYPE VALUES(?,?)");
-                        stmt.setInt(1,ssn);
-                        stmt.setString(2,userTypeAccessed);
-                        stmt.executeUpdate();
-
                         JOptionPane.showMessageDialog(new JFrame(), "Signed Up Successfully");
                         dispose();
-                        new CheckOccurance(userTypeAccessed);
+                        new CheckOccurrence(userTypeAccessed);
                     } else {
                         JOptionPane.showMessageDialog(new JFrame(), "User Already Exists");
                     }

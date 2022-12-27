@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class StartMenu extends JFrame {
-    JButton employee, customer, distributor, doctor, goback;
+    JButton employee, customer, distributor, doctor,companyConnector, goback;
     JPanel panel1,panel2,panel3;
     JLabel label;
     StartMenu(){
@@ -46,12 +46,17 @@ public class StartMenu extends JFrame {
         distributor.setBackground(primary);
         distributor.setFont(new Font("Calibri",Font.BOLD,25));
 
+        companyConnector = new JButton("COMPANY CONNECTOR");
+        companyConnector.setForeground(new Color(0xFFFAF9F4, true));
+        companyConnector.setBackground(primary);
+        companyConnector.setFont(new Font("Calibri",Font.BOLD,25));
+
         goback = new JButton("GO BACK");
         goback.setForeground(new Color(0xFFFAF9F4, true));
         goback.setBackground(primary);
         goback.setFont(new Font("Calibri",Font.BOLD,25));
 
-        panel1.add(employee);panel1.add(customer);panel1.add(doctor);panel1.add(distributor);panel1.add(goback);
+        panel1.add(employee);panel1.add(customer);panel1.add(doctor);panel1.add(distributor);panel1.add(companyConnector);panel1.add(goback);
         getContentPane().add(panel1).setBackground(Color.WHITE);
         add(panel1,BorderLayout.SOUTH);
 
@@ -67,6 +72,7 @@ public class StartMenu extends JFrame {
         customer.addActionListener(myActionListener);
         doctor.addActionListener(myActionListener);
         distributor.addActionListener(myActionListener);
+        companyConnector.addActionListener(myActionListener);
         goback.addActionListener(myActionListener);
         setVisible(true);
     }
@@ -75,16 +81,19 @@ public class StartMenu extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("DOCTOR")){
                 dispose();
-                new CheckOccurance("Doctor");
+                new CheckOccurrence("Doctor");
             }else if (e.getActionCommand().equals("DISTRIBUTOR")){
                 dispose();
-                new CheckOccurance("Distributor");
+                new CheckOccurrence("Distributor");
             }else if (e.getActionCommand().equals("EMPLOYEE")){
                 dispose();
                 new EmployeeChild();
             }else if (e.getActionCommand().equals("CUSTOMER")){
                 dispose();
-                new CheckOccurance("Customer");
+                new CheckOccurrence("Customer");
+            }else if (e.getActionCommand().equals("COMPANY CONNECTOR")){
+                dispose();
+                new CheckOccurrence("Company Connector");
             }else if (e.getActionCommand().equals("GO BACK")){
                 dispose();
                 new StartPage();
