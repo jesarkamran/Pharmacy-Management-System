@@ -46,37 +46,37 @@ public class ManageCompany extends JFrame {
         add_drugs.setForeground(new Color(0xFFFFFFFF, true));
         add_drugs.setBackground(new Color(0xFF426A6C, true));
         add_drugs.setFont(new Font("Calibri",Font.BOLD,25));
-        add_drugs.setBounds(400,50,500,75);
+        add_drugs.setBounds(250,220,400,75);
 
         delete_drugs = new JButton("DELETE DRUGS");
         delete_drugs.setForeground(new Color(0xFFFFFFFF, true));
         delete_drugs.setBackground(new Color(0xFF426A6C, true));
         delete_drugs.setFont(new Font("Calibri",Font.BOLD,25));
-        delete_drugs.setBounds(400,150,500,75);
+        delete_drugs.setBounds(250,320,400,75);
 
         view = new JButton("VIEW");
         view.setForeground(new Color(0xFFFFFFFF, true));
         view.setBackground(new Color(0xFF426A6C, true));
         view.setFont(new Font("Calibri",Font.BOLD,25));
-        view.setBounds(400,250,500,75);
+        view.setBounds(250,420,400,75);
 
         search = new JButton("SEARCH");
         search.setForeground(new Color(0xFFFFFFFF, true));
         search.setBackground(new Color(0xFF426A6C, true));
         search.setFont(new Font("Calibri",Font.BOLD,25));
-        search.setBounds(400,350,500,75);
+        search.setBounds(750,220,400,75);
 
         sell_drugs_to_supplier = new JButton("SELL DRUGS TO SUPPLIER");
         sell_drugs_to_supplier.setForeground(new Color(0xFFFFFFFF, true));
         sell_drugs_to_supplier.setBackground(new Color(0xFF426A6C, true));
         sell_drugs_to_supplier.setFont(new Font("Calibri",Font.BOLD,25));
-        sell_drugs_to_supplier.setBounds(400,450,500,75);
+        sell_drugs_to_supplier.setBounds(750,320,400,75);
 
         go_back = new JButton("GO BACK");
         go_back.setForeground(new Color(0xFFFFFFFF, true));
         go_back.setBackground(new Color(0xFF426A6C, true));
         go_back.setFont(new Font("Calibri",Font.BOLD,25));
-        go_back.setBounds(400,500,550,75);
+        go_back.setBounds(750,420,400,75);
 
         MyActionListener act1 = new MyActionListener(),
                 act2 = new MyActionListener(),

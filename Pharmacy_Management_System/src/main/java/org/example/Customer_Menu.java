@@ -93,10 +93,21 @@ public class Customer_Menu extends JFrame {
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("BUY DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), " Clicked");
+
+                // BUY DRUGS POP-UP SCREEN FRONTEND
+                new Pop_Up_Screen("BUY DRUGS","BUY","buy");
+
+                // BUY DRUGS POP-UP SCREEN BACKEND
+
+
             }
             else if (e.getActionCommand().equals("DELETE DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "DELETE DRUGS Clicked");
+
+                // DELETE DRUGS POP-UP SCREEN FRONTEND
+                new Pop_Up_Screen("DELETE DRUGS","DELETE","delete");
+
+                // DELETE DRUGS POP-UP SCREEN BACKEND
+
 
             }
             else if (e.getActionCommand().equals("VIEW")) {
@@ -104,7 +115,11 @@ public class Customer_Menu extends JFrame {
 
             }
             else if (e.getActionCommand().equals("SEARCH DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "SEARCH Clicked");
+
+                // SEARCH DRUGS POP-UP SCREEN FRONTEND
+                new Pop_Up_Screen("SEARCH DRUGS","SEARCH","search");
+
+                // SEARCH DRUGS POP-UP SCREEN BACKEND
 
             }
             else if (e.getActionCommand().equals("GO BACK")) {

@@ -15,9 +15,11 @@ public class Company_Connector extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         setTitle("Pharmacy Management System");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        setIconImage(imageIcon.getImage());
         setBackground(Color.WHITE);
         userNameAccessed = companyConnectorName;
-        labelHeading = new JLabel("Hey, there"+userNameAccessed);
+        labelHeading = new JLabel("Hey, there "+userNameAccessed);
 
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
