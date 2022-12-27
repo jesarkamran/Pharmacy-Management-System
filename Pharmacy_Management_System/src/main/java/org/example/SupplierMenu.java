@@ -20,7 +20,7 @@ public class SupplierMenu extends JFrame {
         setBackground(Color.WHITE);
 
         userNameAccessed = supplierName;
-        labelHeading = new JLabel("Hey,there "+userNameAccessed);
+        labelHeading = new JLabel("Hey, there "+userNameAccessed);
         labelHeading.setForeground(new Color(66, 106, 108));
         labelHeading.setFont(new Font("Calibri", Font.BOLD, 50));
 
@@ -102,19 +102,19 @@ public class SupplierMenu extends JFrame {
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand().equals("BUY DRUGS FORM COMPANY")) {
-                JOptionPane.showMessageDialog(new JFrame(), "BUY DRUGS FORM COMPANY Clicked");
+                new Supplier_Pop_Up_Screen("BUY DRUGS FORM COMPANY","BUY","buy_from_company");
             }
             else if (e.getActionCommand().equals("DELETE DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "DELETE DRUGS Clicked");
+                new Supplier_Pop_Up_Screen("DELETE DRUGS","DELETE","delete");
             }
             else if (e.getActionCommand().equals("VIEW")) {
                 JOptionPane.showMessageDialog(new JFrame(), "VIEW Clicked");
             }
             else if (e.getActionCommand().equals("SEARCH DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "SEARCH Clicked");
+                new Supplier_Pop_Up_Screen("SEARCH DRUGS","SEARCH","search");
             }
             else if (e.getActionCommand().equals("SELL DRUGS TO SELLER")) {
-                JOptionPane.showMessageDialog(new JFrame(), "SELL DRUGS TO SELLER Clicked");
+                new Supplier_Pop_Up_Screen("SELL DRUGS TO SELLER","SELL","sell_to_seller");
             }
             else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();

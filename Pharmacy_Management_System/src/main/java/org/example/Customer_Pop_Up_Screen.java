@@ -64,30 +64,25 @@ public class Customer_Pop_Up_Screen extends JFrame {
         submit.setFont(new Font("Calibri",Font.BOLD,18));
         submit.setBounds(50,150,200,40);
 
-        center.add(drug_name);
-        center.add(drug_name_input);
-        center.add(submit);
+        center.add(drug_name);center.add(drug_name_input);center.add(submit);
         dealSupplierInput.setVisible(true);
     }
     public  int generateRandom(){
         Random rand = new Random();
-        // Generate a random integer between 0 and 99999999 (inclusive)
-        int randomNumber = rand.nextInt(100000000);
-        return randomNumber;
+        return rand.nextInt(100000000);
     }
     class MyActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
 
             String drugName = drug_name_input.getText();
 
             ConnectionDB connectionDB = new ConnectionDB();
             try {
-                boolean check = true;
+                boolean check = false;
                 ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM seller_drug_details");
                 while (query.next()){
-                    if (query.getString(1).equals(drugName)) {
-                        check = false;
+                    if (query.getString("drug_name").equals(drugName)) {
+                        check = true;
                     }
                 }
                 if (check) {
@@ -132,6 +127,15 @@ public class Customer_Pop_Up_Screen extends JFrame {
                             break;
 
                         case "search":
+                            // BACKEND LOGIC
+                            String outputData = "Here's the search data from Drug Name:"+drugName+"\n \n \n \n "+
+                                    "Drug Name: "+drugName+"\n"+
+                                    "Drug Expiry Date: "+drug_expiryDate+"\n"+
+                                    "Drug Manufacture Date: "+drug_ManufactureDate+"\n"+
+                                    "Price: "+drug_bought_price+"\n"+
+                                    "Company Name: "+drug_manufacture_company_name+
+                                    "\n \n ";
+                            JOptionPane.showMessageDialog(new JFrame(),outputData);
 
                             break;
                     }
