@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Pharmacy-Management-System.iml" filepath="$PROJECT_DIR$/.idea/Pharmacy-Management-System.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System/Pharmacy_Management_System.iml" filepath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System/Pharmacy_Management_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System/Pharmacy_Management_System (1).iml" filepath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System/Pharmacy_Management_System (1).iml" />
     </modules>
   </component>
 </project>
