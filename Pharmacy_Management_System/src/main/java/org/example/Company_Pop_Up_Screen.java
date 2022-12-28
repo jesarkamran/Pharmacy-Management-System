@@ -9,12 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
 
-public class Distributor_Pop_Up_Screen extends JFrame {
+public class Company_Pop_Up_Screen extends JFrame {
     JLabel drug_name;
     JButton submit;
     JTextField drug_name_input;
     String operationTypeAccessed = "";
-    Distributor_Pop_Up_Screen(String title, String buttonType, String operationType){
+    Company_Pop_Up_Screen(String title, String buttonType, String operationType){
         JFrame dealSupplierInput = new JFrame();
         dealSupplierInput.setSize(400,400);
         dealSupplierInput.setTitle(title);
@@ -79,7 +79,7 @@ public class Distributor_Pop_Up_Screen extends JFrame {
             ConnectionDB connectionDB = new ConnectionDB();
             try {
                 boolean check = false;
-                ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM supplier_drug_details");
+                ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM company_drug_details");
                 while (query.next()){
                     if (query.getString("drug_name").equals(drugName)) {
                         check = true;
@@ -87,7 +87,7 @@ public class Distributor_Pop_Up_Screen extends JFrame {
                 }
                 if (check) {
 
-                    // Distributor Drug Details Entity Attributes
+                    // Company Drug Details Entity Attributes
                     drugName = drug_name_input.getText();
                     int drugId = 0;
                     String manufactured_date = "";
@@ -97,29 +97,36 @@ public class Distributor_Pop_Up_Screen extends JFrame {
                     int drug_manufactured_price = 0;
                     int drug_b2b_price = 0;
                     int drug_b2c_price = 0;
-                    int distributor_drug_details_id = 0;
+                    int supplier_drug_details_id = 0;
 
-                    query  = connectionDB.statement.executeQuery("SELECT * FROM supplier_drug_details where drug_name='"+drugName+"'");
+                    query  = connectionDB.statement.executeQuery("SELECT * FROM company_drug_details where drug_name='"+drugName+"'");
                     while (query.next()){
-                        distributor_drug_details_id = generateRandom();
-                         drugId = query.getInt(2);
-                         // drug name
-                         expiry_date = query.getString(4);
-                         manufactured_date = query.getString(5);
-                         drug_manufactured_price = query.getInt(6);
-                         drug_b2b_price = query.getInt(7);
-                         drug_b2c_price = query.getInt(8);
-                         manufacturer_company_id = query.getInt(9);
-                         manufacturer_company_name = query.getString(10);
+                        drugId = query.getInt(2);
+                        // drug name
+                        expiry_date = query.getString(4);
+                        manufactured_date = query.getString(5);
+                        drug_manufactured_price = query.getInt(6);
+                        drug_b2b_price = query.getInt(7);
+                        drug_b2c_price = query.getInt(8);
+                        manufacturer_company_id = query.getInt(9);
+                        manufacturer_company_name = query.getString(10);
+                    }
+
+                    query  = connectionDB.statement.executeQuery("SELECT * FROM distributor_drug_details where drug_name='"+drugName+"'");
+                    while (query.next()){
+                        manufacturer_company_id = query.getInt(9);
+                        manufacturer_company_name = query.getString(10);
                     }
 
                     switch (operationTypeAccessed) {
 
-                        case "buy":
+                        case "sell_to_supplier":
 
                             // BACKEND LOGIC
-                            PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO distributor_drug_details VALUES(?,?,?,?,?,?,?,?,?,?)");
-                            stmt.setInt(1, distributor_drug_details_id);
+                            supplier_drug_details_id = generateRandom();
+
+                            PreparedStatement stmt = connectionDB.connection.prepareStatement("INSERT INTO supplier_drug_details VALUES(?,?,?,?,?,?,?,?,?,?)");
+                            stmt.setInt(1, supplier_drug_details_id);
                             stmt.setInt(2, drugId);
                             stmt.setString(3, drugName);
                             stmt.setString(4, expiry_date);
@@ -131,14 +138,12 @@ public class Distributor_Pop_Up_Screen extends JFrame {
                             stmt.setString(10, manufacturer_company_name);
                             stmt.executeUpdate();
 
-                            JOptionPane.showMessageDialog(new JFrame(), "Drug Bought!!");
-
                             break;
 
                         case "delete":
                             // BACKEND LOGIC
                             try {
-                                stmt = connectionDB.connection.prepareStatement("DELETE FROM distributor_drug_details where drug_name='"+drugName+"'");
+                                stmt = connectionDB.connection.prepareStatement("DELETE FROM company_drug_details where drug_name='"+drugName+"'");
                                 stmt.executeUpdate();
                                 JOptionPane.showMessageDialog(new JFrame(),"Drug Removed Successfully");
                             }catch (SQLException ex) {
@@ -160,24 +165,6 @@ public class Distributor_Pop_Up_Screen extends JFrame {
                                     "Company Name: "+manufacturer_company_name+
                                     "\n";
                             JOptionPane.showMessageDialog(new JFrame(),outputData);
-
-                            break;
-
-                        case "sell_to_doctor":
-
-                            int doctor_drug_details_id = generateRandom();
-
-                            stmt = connectionDB.connection.prepareStatement("INSERT INTO doctor_drug_details VALUES(?,?,?,?,?,?,?)");
-                            stmt.setInt(1, doctor_drug_details_id);
-                            stmt.setInt(2, drugId);
-                            stmt.setString(3, drugName);
-                            stmt.setString(4, expiry_date);
-                            stmt.setString(5, manufactured_date);
-                            stmt.setInt(6, drug_b2c_price);
-                            stmt.setString(7, manufacturer_company_name);
-                            stmt.executeUpdate();
-
-                            JOptionPane.showMessageDialog(new JFrame(), "Drug Sold!!");
 
                             break;
                     }

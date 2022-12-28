@@ -104,16 +104,16 @@ public class ManageCompany extends JFrame {
                 new Add_Drugs(userNameAccessed,companyId);
             }
             else if (e.getActionCommand().equals("DELETE DRUGS")) {
-                JOptionPane.showMessageDialog(new JFrame(), "DELETE DRUGS Clicked");
+                new Distributor_Pop_Up_Screen("DELETE DRUGS","DELETE","delete");
             }
             else if (e.getActionCommand().equals("VIEW")) {
-                JOptionPane.showMessageDialog(new JFrame(), "VIEW Clicked");
+//                JOptionPane.showMessageDialog(new JFrame(), "VIEW Clicked");
             }
             else if (e.getActionCommand().equals("SEARCH")) {
-                JOptionPane.showMessageDialog(new JFrame(), "SEARCH Clicked");
+                new Distributor_Pop_Up_Screen("SEARCH DRUGS","SEARCH","search");
             }
             else if (e.getActionCommand().equals("SELL DRUGS TO SUPPLIER")) {
-                JOptionPane.showMessageDialog(new JFrame(), "SELL DRUGS TO SUPPLIER Clicked");
+                new Distributor_Pop_Up_Screen("SELL DRUGS","SELL","sell_to_supplier");
             }
             else if (e.getActionCommand().equals("GO BACK")) {
                 dispose();

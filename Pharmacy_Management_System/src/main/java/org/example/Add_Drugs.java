@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 
 public class Add_Drugs extends JFrame
 {
@@ -154,6 +155,10 @@ public class Add_Drugs extends JFrame
 
         setVisible(true);
     }
+    public  int generateRandom(){
+        Random rand = new Random();
+        return rand.nextInt(100000000);
+    }
 
     class MyActionListener  implements ActionListener
     {
@@ -165,12 +170,12 @@ public class Add_Drugs extends JFrame
                 int drugId = Integer.parseInt(drug_id_input.getText());
                 String manufactured_date = manufacture_date_input.getText();
                 String expiry_date = expiry_date_input.getText();
-                int manufacturer_company_id = 0;
+                int manufacturer_company_id = generateRandom();
                 String manufacturer_company_name = "";
                 int drug_manufactured_price = Integer.parseInt(manufactured_price_input.getText());
                 int drug_b2b_price = Integer.parseInt(b2_B_price_input.getText());
                 int drug_b2c_price = Integer.parseInt(b2_C_price_input.getText());
-                int customerID = 0;
+                int customerID = companyId;
 
 
                 ConnectionDB connectionDB = new ConnectionDB();
@@ -184,7 +189,7 @@ public class Add_Drugs extends JFrame
                     }
                     if (check) {
 
-                        query  = connectionDB.statement.executeQuery("SELECT * FROM company where company_id='"+companyId+"'");
+                        query  = connectionDB.statement.executeQuery("SELECT * FROM company where company_id='"+customerID+"'");
                         while (query.next()){
                             manufacturer_company_name = query.getString(2);
                         }
