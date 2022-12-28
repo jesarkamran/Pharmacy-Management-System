@@ -65,7 +65,12 @@ public class Supplier_Pop_Up_Screen extends JFrame {
         submit.setBounds(50,150,200,40);
 
         center.add(drug_name);center.add(drug_name_input);center.add(submit);
-        dealSupplierInput.setVisible(true);
+
+        if (operationType.equals("view_all")) {
+            dealSupplierInput.setVisible(false);
+        }else {
+            dealSupplierInput.setVisible(true);
+        }
     }
     public  int generateRandom(){
         Random rand = new Random();
@@ -145,6 +150,15 @@ public class Supplier_Pop_Up_Screen extends JFrame {
                             break;
 
                         case "delete":
+
+                            // BACKEND LOGIC
+                            try {
+                                stmt = connectionDB.connection.prepareStatement("DELETE FROM supplier_drug_details where drug_name='"+drugName+"'");
+                                stmt.executeUpdate();
+                                JOptionPane.showMessageDialog(new JFrame(),"Drug Removed Successfully");
+                            }catch (SQLException ex) {
+                                throw new RuntimeException(ex);
+                            }
                             break;
 
                         case "search":
@@ -178,6 +192,7 @@ public class Supplier_Pop_Up_Screen extends JFrame {
 
                             JOptionPane.showMessageDialog(new JFrame(), "Drug Sold!!");
                             break;
+
                     }
                     dispose();
                 } else {

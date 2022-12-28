@@ -80,32 +80,30 @@ public class Login extends JFrame {
                                }
 
                                switch (userTypeAccessed) {
-
-                                   case "Employee":
-                                       break;
-
-                                   case "Doctor":
-                                       break;
-
-                                   case "Distributor":
-                                       break;
-
-                                   case "Customer":
+                                   case "Doctor" -> {
+                                       dispose();
+                                       new Doctor_Menu(userName);
+                                   }
+                                   case "Distributor" -> {
+                                       dispose();
+                                       new Distributor_Menu(userName);
+                                   }
+                                   case "Customer" -> {
                                        dispose();
                                        new Customer_Menu(userName);
-                                       break;
-                                   case "Supplier":
+                                   }
+                                   case "Supplier" -> {
                                        dispose();
                                        new SupplierMenu(userName);
-                                       break;
-                                   case "Seller":
+                                   }
+                                   case "Seller" -> {
                                        dispose();
                                        new SellerMenu(userName);
-                                       break;
-                                   case "Company Connector":
+                                   }
+                                   case "Company Connector" -> {
                                        dispose();
                                        new Company_Connector(userName);
-                                       break;
+                                   }
                                }
                            } else {
                            JOptionPane.showMessageDialog(new JFrame(), "Invalid Creditionals");

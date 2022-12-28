@@ -9,12 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
 
-public class Customer_Pop_Up_Screen extends JFrame {
+public class Distributor_Pop_Up_Screen extends JFrame {
     JLabel drug_name;
     JButton submit;
     JTextField drug_name_input;
     String operationTypeAccessed = "";
-    Customer_Pop_Up_Screen(String title, String buttonType, String operationType){
+    Distributor_Pop_Up_Screen(String title, String buttonType, String operationType){
         JFrame dealSupplierInput = new JFrame();
         dealSupplierInput.setSize(400,400);
         dealSupplierInput.setTitle(title);
@@ -79,7 +79,7 @@ public class Customer_Pop_Up_Screen extends JFrame {
             ConnectionDB connectionDB = new ConnectionDB();
             try {
                 boolean check = false;
-                ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM seller_drug_details");
+                ResultSet query  = connectionDB.statement.executeQuery("SELECT drug_name FROM supplier_drug_details");
                 while (query.next()){
                     if (query.getString("drug_name").equals(drugName)) {
                         check = true;
@@ -87,22 +87,26 @@ public class Customer_Pop_Up_Screen extends JFrame {
                 }
                 if (check) {
 
-                    // Customer Drug Details Entity Attributes
-                    int customer_drug_details_id = 0;
-                    String drug_name = "";
-                    String drug_expiryDate = "";
-                    String drug_ManufactureDate = "";
-                    int drug_bought_price = 0;
-                    String drug_manufacture_company_name = "";
+                    // Distributor Drug Details Entity Attributes
+                    drugName = drug_name_input.getText();
+                    int drugId = 0;
+                    String manufactured_date = "";
+                    String expiry_date = "";
+                    int manufacturer_company_id = 0;
+                    String manufacturer_company_name = "";
+                    int drug_manufactured_price = 0;
+                    int drug_b2b_price = 0;
+                    int drug_b2c_price = 0;
+                    int distributor_drug_details_id = 0;
 
-                    query  = connectionDB.statement.executeQuery("SELECT * FROM seller_drug_details where drug_name='"+drugName+"'");
+                    query  = connectionDB.statement.executeQuery("SELECT * FROM supplier_drug_details where drug_name='"+drugName+"'");
                     while (query.next()){
-                        customer_drug_details_id = generateRandom();
-                        drug_name = query.getString(3);
-                        drug_expiryDate = query.getString(4);
-                        drug_ManufactureDate = query.getString(5);
-                        drug_bought_price = query.getInt(8);
-                        drug_manufacture_company_name = query.getString(10);
+                        distributor_drug_details_id = generateRandom();
+                        drugId = query.getInt(3);
+                        expiry_date = query.getString(4);
+                        manufactured_date = query.getString(5);
+                        drug_b2b_price = query.getInt(8);
+                        manufacturer_company_name = query.getString(10);
                     }
 
                     switch (operationTypeAccessed) {

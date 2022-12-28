@@ -82,10 +82,6 @@ public class Company_to_Manage extends JFrame
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new Company_to_Manage("Deepak");
-    }
-
     class MyActionListener  implements ActionListener
     {
         public void actionPerformed(ActionEvent e) {
