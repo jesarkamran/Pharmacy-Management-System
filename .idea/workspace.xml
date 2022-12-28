@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f23d621-5dc9-444d-86e6-19148b3853ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/MongoConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/4th Semester/DBMS/DB Project/Pharmacy-Management-System/MongoDB Version/mongo-java-driver-3.12.11.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/4th Semester/DBMS/DB Project/Pharmacy-Management-System/MongoDB Version/mongo-java-driver-3.12.11.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Runner (1)">
+}</component>
+  <component name="RunManager" selected="Application.Runner">
     <configuration name="Company_to_Manage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Company_to_Manage" />
       <module name="Pharmacy_Management_System" />
@@ -118,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Runner (1)" />
         <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.Runner (1)" />
         <item itemvalue="Application.Doctor_Menu" />
         <item itemvalue="Application.Company_to_Manage" />
         <item itemvalue="Application.SupplierMenu" />
@@ -143,7 +147,8 @@
       <workItem from="1672161650115" duration="13172000" />
       <workItem from="1672199936156" duration="543000" />
       <workItem from="1672213466722" duration="7177000" />
-      <workItem from="1672235886171" duration="10474000" />
+      <workItem from="1672235886171" duration="11169000" />
+      <workItem from="1672257072080" duration="754000" />
     </task>
     <servers />
   </component>

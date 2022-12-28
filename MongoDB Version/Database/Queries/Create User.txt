@@ -1,5 +1,0 @@
-create user finalProject identified by db;
-Grant connect to finalProject;
-Grant create session, grant any PRIVILEGE to finalProject;
-Grant unlimited tablespace to finalProject;
-Grant create table to finalProject;
