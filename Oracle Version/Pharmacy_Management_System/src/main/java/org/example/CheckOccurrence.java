@@ -14,7 +14,7 @@ public class CheckOccurrence extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pharmacy Management System");
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
 
@@ -50,7 +50,7 @@ public class CheckOccurrence extends JFrame {
         add(panel1,BorderLayout.SOUTH);
 
         panel3 = new JPanel();
-        ImageIcon myPicture = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\confused_3.gif");
+        ImageIcon myPicture = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\confused_3.gif");
         JLabel picLabel = new JLabel(myPicture);
         panel3.add(picLabel);
         getContentPane().add(panel3).setBackground(Color.WHITE);

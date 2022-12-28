@@ -17,7 +17,7 @@ public class SignUp extends JFrame {
         setTitle("Pharmacy Management System");
         getContentPane().setBackground(Color.WHITE);
         setLocationRelativeTo(null);
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
         userTypeAccessed = userType;

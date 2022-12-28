@@ -28,7 +28,7 @@ public class Add_Drugs extends JFrame
         setBackground(Color.WHITE);
         userNameAccessed = userName;
         labelHeading = new JLabel("Hello, "+userNameAccessed);
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
 
         companyId  = companyIdIN;

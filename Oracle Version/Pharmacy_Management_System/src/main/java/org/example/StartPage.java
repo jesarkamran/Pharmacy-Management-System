@@ -13,7 +13,7 @@ public class StartPage extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH); setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout()); setTitle("Pharmacy Management System");
         setBackground(Color.WHITE);
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
 
@@ -42,7 +42,7 @@ public class StartPage extends JFrame {
         Dimension screenSize = toolkit.getScreenSize();
 
         try {
-            ImageIcon img = new ImageIcon(new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\startPage.jpeg").getImage()
+            ImageIcon img = new ImageIcon(new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\startPage.jpeg").getImage()
                     .getScaledInstance(screenSize.width, 700, Image.SCALE_AREA_AVERAGING));
             displayImage =  new JLabel(img);
         }catch (Exception e)
