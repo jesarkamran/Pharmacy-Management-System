@@ -11,6 +11,5 @@ public class MongoConnection {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
 }

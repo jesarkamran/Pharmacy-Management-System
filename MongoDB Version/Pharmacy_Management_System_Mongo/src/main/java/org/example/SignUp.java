@@ -135,6 +135,10 @@ public class SignUp extends JFrame {
                 int zipCode = Integer.parseInt(zipCodeInput.getText());
 
                 ConnectionDB connectionDB = new ConnectionDB();
+
+
+
+
                 try {
                     boolean check = true;
                     ResultSet query  = connectionDB.statement.executeQuery("SELECT ssn FROM PERSON");

@@ -16,7 +16,7 @@ public class EmployeeChild extends JFrame {
         setLayout(new BorderLayout());
         setTitle("Pharmacy Management System");
         setBackground(Color.WHITE);
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System_Oracle\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         labelHeading = new JLabel("ARE YOU A?");
         labelHeading.setForeground(new Color(66, 106, 108));

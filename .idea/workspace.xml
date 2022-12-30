@@ -6,9 +6,63 @@
   <component name="ChangeListManager">
     <list default="true" id="7f23d621-5dc9-444d-86e6-19148b3853ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/MongoConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/src/main/java/org/example/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/MongoConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/MongoConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/SignUp$MyActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/SignUp$MyActionListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/SignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/target/classes/org/example/SignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Drugs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Drugs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Add_Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/CheckOccurrence.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/CheckOccurrence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_to_Manage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Company_to_Manage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Buy_Medicine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Buy_Medicine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Customer_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Distributor_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Distributor_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Distributor_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Distributor_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Doctor_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Doctor_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Doctor_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Doctor_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Drug_Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Drug_Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/EmployeeChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/EmployeeChild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/ManageCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/ManageCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SellerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Seller_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Seller_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/StartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SupplierMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/SupplierMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Supplier_Pop_Up_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/src/main/java/org/example/Supplier_Pop_Up_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Drugs.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Drugs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Add_Stock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/CheckOccurrence.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/CheckOccurrence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_Connector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_Pop_Up_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_to_Manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Company_to_Manage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Buy_Medicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Buy_Medicine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Customer_Pop_Up_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Distributor_Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Distributor_Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Distributor_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Distributor_Pop_Up_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Doctor_Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Doctor_Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Doctor_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Doctor_Pop_Up_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Drug_Details.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Drug_Details.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/EmployeeChild.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/EmployeeChild.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/ManageCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/ManageCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SellerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SellerMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Seller_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Seller_Pop_Up_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/StartMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/StartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/StartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SupplierMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/SupplierMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Supplier_Pop_Up_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/target/classes/org/example/Supplier_Pop_Up_Screen.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +94,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/4th Semester/DBMS/DB Project/Pharmacy-Management-System/MongoDB Version/mongo-java-driver-3.12.11.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/4th Semester/DBMS/Daoud/Pharmacy-Management-System",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager" selected="Application.Runner">
+}]]></component>
+  <component name="RunManager" selected="Application.Runner (1)">
     <configuration name="Company_to_Manage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Company_to_Manage" />
       <module name="Pharmacy_Management_System" />
@@ -122,8 +176,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.Runner (1)" />
+        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.Doctor_Menu" />
         <item itemvalue="Application.Company_to_Manage" />
         <item itemvalue="Application.SupplierMenu" />
@@ -148,7 +202,11 @@
       <workItem from="1672199936156" duration="543000" />
       <workItem from="1672213466722" duration="7177000" />
       <workItem from="1672235886171" duration="11169000" />
-      <workItem from="1672257072080" duration="754000" />
+      <workItem from="1672257072080" duration="981000" />
+      <workItem from="1672286930742" duration="2917000" />
+      <workItem from="1672296142338" duration="926000" />
+      <workItem from="1672299986852" duration="1251000" />
+      <workItem from="1672333049216" duration="2241000" />
     </task>
     <servers />
   </component>

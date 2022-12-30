@@ -11,7 +11,7 @@ public class StartMenu extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pharmacy Management System");
-        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\officialLogo.png");
+        ImageIcon imageIcon = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System_Oracle\\src\\main\\java\\org\\images\\officialLogo.png");
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
         Color primary = new Color(66, 106, 108);
@@ -61,7 +61,7 @@ public class StartMenu extends JFrame {
         add(panel1,BorderLayout.SOUTH);
 
         panel3 = new JPanel();
-        ImageIcon myPicture = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System\\src\\main\\java\\org\\images\\confused_director.gif");
+        ImageIcon myPicture = new ImageIcon("D:\\4th Semester\\DBMS\\DB Project\\Pharmacy-Management-System\\Oracle Version\\Pharmacy_Management_System_Oracle\\src\\main\\java\\org\\images\\confused_director.gif");
         JLabel picLabel = new JLabel(myPicture);
         panel3.add(picLabel);
         add(panel3,BorderLayout.CENTER);
