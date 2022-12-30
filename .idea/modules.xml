@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Pharmacy-Management-System.iml" filepath="$PROJECT_DIR$/.idea/Pharmacy-Management-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" filepath="$PROJECT_DIR$/MongoDB Version/Pharmacy_Management_System_Mongo/Pharmacy_Management_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/Pharmacy_Management_System (1).iml" filepath="$PROJECT_DIR$/Oracle Version/Pharmacy_Management_System_Oracle/Pharmacy_Management_System (1).iml" />
+    </modules>
+  </component>
+</project>
